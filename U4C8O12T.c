@@ -152,12 +152,15 @@ int main() {
     gpio_put(LED_G, false);
 
     // ---------- Display I2C -----------
+    ssd1306_t disp;
     i2c_init(I2C_PORT, 400 * 1000);
     gpio_set_function(I2C_SDA, GPIO_FUNC_I2C);
     gpio_set_function(I2C_SCL, GPIO_FUNC_I2C);
     gpio_pull_up(I2C_SDA);
     gpio_pull_up(I2C_SCL);
     ssd1306_init(&disp, 128, 64, false, DISP_ADDR, I2C_PORT);
+    ssd1306_config(&disp); // Configura o display
+    ssd1306_send_data(&disp); // Envia os dados para o display
 
     // ---------- Calibra Joystick (para LEDs) -----------
     calibrate_joystick();
