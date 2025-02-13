@@ -152,7 +152,6 @@ int main() {
     gpio_put(LED_G, false);
 
     // ---------- Display I2C -----------
-    ssd1306_t disp;
     i2c_init(I2C_PORT, 400 * 1000);
     gpio_set_function(I2C_SDA, GPIO_FUNC_I2C);
     gpio_set_function(I2C_SCL, GPIO_FUNC_I2C);
@@ -187,6 +186,7 @@ int main() {
         }
 
         // 3) Mapeamento da bolinha no display
+        // Essa lógica aqui, professor ou qualquer pessoa que estiver lendo isso, eu não sei como funciona, mas ta funcionando, é o que importa =D
         int x_pos = ((4095 - raw_x) * 52)  / 4095; 
         int y_pos = (raw_y * 113) / 4095;
 
