@@ -12,7 +12,7 @@ Este projeto utiliza um Raspberry Pi Pico para controlar LEDs RGB e um display O
 ## Demonstração
 Confira o funcionamento do projeto neste vídeo:
 
-[![Vídeo de demonstração]()]()
+[![Vídeo de Demonstração](https://img.youtube.com/vi/vfrHuauVjWI/0.jpg)](https://youtu.be/vfrHuauVjWI)
 
 ## Requisitos de Hardware
 - Raspberry Pi Pico
